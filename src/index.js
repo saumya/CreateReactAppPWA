@@ -6,11 +6,11 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 //injectTapEventPlugin();
 
 import App from './App';
-//import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 // enabling tap event
 injectTapEventPlugin();
 //rendering the application
 ReactDOM.render(<App />, document.getElementById('root'));
-//registerServiceWorker();
+registerServiceWorker();
