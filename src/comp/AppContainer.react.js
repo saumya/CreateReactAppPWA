@@ -16,7 +16,10 @@ class AppContainer extends Component {
     return(
       <MuiThemeProvider>
         <div> 
-          AppContainer.react 
+          AppContainer.react
+          <div>
+            The application will render here
+          </div>
         </div>
       </MuiThemeProvider>
     );
