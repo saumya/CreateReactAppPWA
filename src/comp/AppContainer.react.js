@@ -6,11 +6,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class AppContainer extends Component {
   
-  /*
+  
   constructor(props){
-    super(props)
+    super(props);
+    console.log('AppContainer : constructor :');
   }
-  */
+  
   
   render(){
     return(
