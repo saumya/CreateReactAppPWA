@@ -12,7 +12,6 @@ class AppContainer extends Component {
     console.log('AppContainer : constructor :');
   }
   
-  
   render(){
     return(
       <MuiThemeProvider>
@@ -25,6 +24,17 @@ class AppContainer extends Component {
       </MuiThemeProvider>
     );
   }
+
+  // lifecycle : Start
+  componentDidMount(){
+    console.log('AppContainer : componentDidMount');
+    //firebase.initializeApp(FirebaseConfig.getThisAppConfig().firebase);
+  }
+  componentWillUnmount(){
+    console.log('AppContainer : componentWillUnmount');
+  }
+  // lifecycle : End
+  // utility
 
 }
 export default AppContainer;
