@@ -1,5 +1,6 @@
 //
 // Application Logical Entry
+// Parent container of all
 //
 import React,{Component} from 'react';
 //
