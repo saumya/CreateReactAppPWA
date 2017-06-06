@@ -16,23 +16,28 @@ class AppContainer extends Component {
   constructor(props){
     super(props);
     console.log('AppContainer : constructor :');
+    this.state = {isMenuOpen: false};
   }
-  
+  handleToggle = () => this.setState({isMenuOpen: !this.state.isMenuOpen});
   render(){
     return(
       <MuiThemeProvider>
         <div> 
           AppContainer.react
+          <RaisedButton label="Toggle Drawer" onTouchTap={this.handleToggle} />
           <div>
             The application will render here
           </div>
           
-          <Drawer open={true}>
+          <Drawer 
+            docked={false} width={200} 
+            onRequestChange={(open) => this.setState({isMenuOpen: open})}
+            open={this.state.isMenuOpen}>
            <h3>Navigate</h3>
            <MenuItem>Menu Item</MenuItem>
            <MenuItem>Menu Item 2</MenuItem>
           </Drawer>
-          
+
         </div>
       </MuiThemeProvider>
     );
