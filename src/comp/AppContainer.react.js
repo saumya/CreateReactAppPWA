@@ -5,7 +5,10 @@
 import React,{Component} from 'react';
 //
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
+//
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class AppContainer extends Component {
   
@@ -23,6 +26,13 @@ class AppContainer extends Component {
           <div>
             The application will render here
           </div>
+          
+          <Drawer open={true}>
+           <h3>Navigate</h3>
+           <MenuItem>Menu Item</MenuItem>
+           <MenuItem>Menu Item 2</MenuItem>
+          </Drawer>
+          
         </div>
       </MuiThemeProvider>
     );
