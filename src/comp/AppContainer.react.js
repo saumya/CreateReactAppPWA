@@ -6,27 +6,38 @@ import React,{Component} from 'react';
 //
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //
+import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
+import Paper from 'material-ui/Paper';
 
 class AppContainer extends Component {
-  
-  
+
   constructor(props){
     super(props);
     console.log('AppContainer : constructor :');
     this.state = {isMenuOpen: false};
-  }
+
+    this.style = {
+      height: 200, width: 200, margin: 20,
+      textAlign: 'center', display: 'inline-block', };
+    }
   handleToggle = () => this.setState({isMenuOpen: !this.state.isMenuOpen});
   render(){
     return(
       <MuiThemeProvider>
         <div> 
-          AppContainer.react
-          <RaisedButton label="Toggle Drawer" onTouchTap={this.handleToggle} />
+          <AppBar title="Title" 
+            onLeftIconButtonTouchTap={this.handleToggle}
+            iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+          
           <div>
-            The application will render here
+            Aliquam a ante fringilla, suscipit ex nec, eleifend ligula. Nunc rhoncus venenatis urna id vulputate. In fringilla bibendum sem id interdum. Quisque tincidunt viverra lectus, eget semper erat auctor vitae.
+            
+            <Paper style={this.style} zDepth={1}>
+              Aliquam a ante fringilla, suscipit ex nec, eleifend ligula. Nunc rhoncus venenatis urna id vulputate. In fringilla bibendum sem id interdum. Quisque tincidunt viverra lectus, eget semper erat auctor vitae.
+            </Paper>
           </div>
           
           <Drawer 
