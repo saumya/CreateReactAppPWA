@@ -38,6 +38,10 @@ class AppContainer extends Component {
             <Paper style={this.style} zDepth={1}>
               Aliquam a ante fringilla, suscipit ex nec, eleifend ligula. Nunc rhoncus venenatis urna id vulputate. In fringilla bibendum sem id interdum. Quisque tincidunt viverra lectus, eget semper erat auctor vitae.
             </Paper>
+            <Paper style={this.style} zDepth={1}>
+              Aliquam a ante fringilla, suscipit ex nec, eleifend ligula. Nunc rhoncus venenatis urna id vulputate. In fringilla bibendum sem id interdum. Quisque tincidunt viverra lectus, eget semper erat auctor vitae.
+            </Paper>
+            
           </div>
           
           <Drawer 
