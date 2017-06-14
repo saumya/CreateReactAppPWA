@@ -52,6 +52,7 @@ class AppContainer extends Component {
            <h3>Navigate</h3>
            <MenuItem>Menu Item</MenuItem>
            <MenuItem>Menu Item 2</MenuItem>
+           <MenuItem>Menu Item 3</MenuItem>
           </Drawer>
 
         </div>
