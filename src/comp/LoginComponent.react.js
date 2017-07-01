@@ -9,7 +9,7 @@ class LoginComponent extends Component {
 	render(){
 		return(
 			<div>
-				Login component to be done
+				This has to be Material UI Component.
 				<ul>
 					<li>user name</li>
 					<li>password</li>
