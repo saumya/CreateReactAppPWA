@@ -12,6 +12,8 @@ import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 
+import TextField from 'material-ui/TextField';
+
 import LoginComponent from './LoginComponent.react';
 
 class AppContainer extends Component {
@@ -45,7 +47,7 @@ class AppContainer extends Component {
               Aliquam a ante fringilla, suscipit ex nec, eleifend ligula. Nunc rhoncus venenatis urna id vulputate. In fringilla bibendum sem id interdum. Quisque tincidunt viverra lectus, eget semper erat auctor vitae.
             </Paper>
 
-            <Paper style={this.style} zDepth={1}>
+            <Paper style={{width:'80%', margin:'2em'}} zDepth={1}>
               <LoginComponent />
             </Paper>
 

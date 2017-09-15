@@ -1,19 +1,36 @@
 //
 import React, {Component} from 'react';
 
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
+
 class LoginComponent extends Component {
 	constructor(props){
 		super(props);
-		this.state = {}
+		this.state = {};
+		this.style = {};
 	}
 	render(){
 		return(
 			<div>
-				This has to be Material UI Component.
-				<ul>
-					<li>user name</li>
-					<li>password</li>
+				<ul style={{'list-style-type': 'none', padding:'1em'}}>
+					<li>
+						<TextField style={{width:'100%'}}
+							hintText="Blue Forest"
+							floatingLabelText="User Name" />
+					</li>
+					<li>
+						<TextField style={{width:'100%', 'margin-bottom':'1em'}}
+							hintText="Your Password"
+							type="password"
+							floatingLabelText="Password" />
+					</li>
+					<li>
+						<RaisedButton primary={true} label="Login" style={this.style} />
+					</li>
 				</ul>
+
+
 			</div>
 		);
 	}
