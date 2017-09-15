@@ -13,14 +13,14 @@ class LoginComponent extends Component {
 	render(){
 		return(
 			<div>
-				<ul style={{'list-style-type': 'none', padding:'1em'}}>
+				<ul style={{'listStyleType': 'none', padding:'1em'}}>
 					<li>
 						<TextField style={{width:'100%'}}
 							hintText="Blue Forest"
 							floatingLabelText="User Name" />
 					</li>
 					<li>
-						<TextField style={{width:'100%', 'margin-bottom':'1em'}}
+						<TextField style={{width:'100%', 'marginBottom':'1em'}}
 							hintText="Your Password"
 							type="password"
 							floatingLabelText="Password" />
