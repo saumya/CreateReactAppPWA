@@ -10,7 +10,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 class LoginComponent extends Component {
 	constructor(props){
 		super(props);
-		this.state = {};
+		this.state = {viewLogin:true};
 		this.style = {};
 	}
 	render(){
