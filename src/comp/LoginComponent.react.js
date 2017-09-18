@@ -6,6 +6,7 @@ import React, {Component} from 'react';
 
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 class LoginComponent extends Component {
 	constructor(props){
@@ -17,6 +18,7 @@ class LoginComponent extends Component {
 		return(
 			<div>
 				<ul style={{'listStyleType': 'none', padding:'1em'}}>
+				{ ( (this.state.viewLogin===true) ? "Login" : "Register") }
 					<li>
 						<TextField style={{width:'100%'}}
 							hintText="Blue Forest"
@@ -28,14 +30,35 @@ class LoginComponent extends Component {
 							type="password"
 							floatingLabelText="Password" />
 					</li>
-					<li>
-						<RaisedButton primary={true} label="Login" style={this.style} />
-					</li>
+					{
+						(this.state.viewLogin===true) 
+						?
+						<li>
+							<RaisedButton primary={true} label="Login" style={this.style} onClick={this.onLoginView.bind(this)} />
+							<FlatButton label="Register" style={this.style} onClick={this.onRegisterView.bind(this)} />
+						</li> 
+						:
+						<li>
+							<FlatButton  label="Login" style={this.style} onClick={this.onLoginView.bind(this)} />
+							<RaisedButton primary={true} label="Register" style={this.style} onClick={this.onRegisterView.bind(this)} />
+						</li>
+
+					}
+					
 				</ul>
 
 
 			</div>
 		);
+	}
+	onRegisterView(){
+		console.log('onRegisterView');
+		console.log(this.state);
+		this.setState({viewLogin:false});
+	}
+	onLoginView() {
+		console.log(this.state);
+		this.setState({viewLogin:true});
 	}
 }
 
