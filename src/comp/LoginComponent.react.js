@@ -1,5 +1,5 @@
 //
-// Login / Register UI Component
+// A generic component for Login and Register
 //
 
 import React, {Component} from 'react';
